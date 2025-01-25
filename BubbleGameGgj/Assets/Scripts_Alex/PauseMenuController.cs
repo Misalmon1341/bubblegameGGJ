@@ -5,62 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public GameObject pauseMenuPanel; 
-    private bool isPaused = false; 
-
-    // Paneles de victoria o derrota, para evitar sobreposiciones
-    public GameObject winPanel;
-    public GameObject losePanel;
+    public static bool JuegoPausado = false;
+    public GameObject panelPausa; // Panel de pausa
+    public GameObject panelConfiguraciones; // Panel de configuraciones
 
     void Update()
     {
-        /*esto solo detecta que no este los dos panels para mandar a llamar el menu de pausa*/
-        if (Input.GetKeyDown(KeyCode.Escape) && !IsOtherPanelActive())
+        // Verificar si se presiona ESC y se está en la pantalla de configuraciones
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (panelConfiguraciones.activeSelf)
             {
-                Resume();
+                CerrarConfiguraciones(); 
+            }
+            else if (!panelPausa.activeSelf)
+            {
+                PausarJuego(); 
             }
             else
             {
-                Pause();
+                ReanudarJuego(); 
             }
         }
     }
 
-    public void Resume()
+    // Función para pausar el juego y mostrar el panel de pausa
+    public void PausarJuego()
     {
-        pauseMenuPanel.SetActive(false); 
-        Time.timeScale = 1f; 
-        isPaused = false; 
-    }
-
-    void Pause()
-    {
-        pauseMenuPanel.SetActive(true); 
+        panelPausa.SetActive(true); 
         Time.timeScale = 0f; 
-        isPaused = true; 
+        JuegoPausado = true;
     }
 
-    public void LoadMainMenu()
+    // Función para reanudar el juego y cerrar el panel de pausa
+    public void ReanudarJuego()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
+        panelPausa.SetActive(false); 
+        Time.timeScale = 1f; 
+        JuegoPausado = false;
     }
 
-    public void QuitGame()
+    // Función para abrir el panel de configuraciones desde el panel de pausa
+    public void AbrirConfiguraciones()
     {
-        Application.Quit();
-        Debug.Log("El juego se ha cerrado.");
+        panelPausa.SetActive(false); 
+        panelConfiguraciones.SetActive(true); 
     }
 
-    private bool IsOtherPanelActive()
+    // Función para cerrar el panel de configuraciones y volver al de pausa
+    public void CerrarConfiguraciones()
     {
-        if ((winPanel != null && winPanel.activeSelf) || (losePanel != null && losePanel.activeSelf))
-        {
-            return true;
-        }
+        panelConfiguraciones.SetActive(false); 
+        panelPausa.SetActive(true); 
+    }
 
-        return false;
+    // Función para salir al menú principal
+    public void SalirAlMenuPrincipal()
+    {
+        Time.timeScale = 1f; 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuPrincipal");
     }
 }
