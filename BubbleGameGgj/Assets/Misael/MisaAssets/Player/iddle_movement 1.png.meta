@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 181220850c2088d47ad3b46a737cfc7f
+guid: 21ad70e2af3ebe14e8e8b16b5787a609
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bitmask references 2_0
+      name: iddle_movement_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 30
-        height: 33
+        x: 293
+        y: 1168
+        width: 421
+        height: 855
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 002cf2d0001964a40bc0c34fa7956372
-      internalID: -2041598326
+      spriteID: 25a6c8c797ada1d409dca2b2da09c61e
+      internalID: 168056534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle_movement_1
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1168
+        width: 407
+        height: 863
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffb54c909656414f92691265f949915
+      internalID: 655576062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle_movement_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 48
+        width: 394
+        height: 870
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d660865405619c4daa3a27ac4c82406
+      internalID: -2112358587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iddle_movement_3
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 48
+        width: 394
+        height: 890
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924921f029d984a4ab28d2fcec8c1e39
+      internalID: -416479069
       vertices: []
       indices: 
       edges: []
@@ -141,7 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bitmask references 2_0: -2041598326
+      iddle_movement_0: 168056534
+      iddle_movement_1: 655576062
+      iddle_movement_2: -2112358587
+      iddle_movement_3: -416479069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

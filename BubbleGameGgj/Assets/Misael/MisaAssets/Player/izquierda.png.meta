@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c285852fdd126ca4aaaca6c124fa577e
+guid: 0f91c96778c065e45a880e33d4e09c1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 350
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_0
+      name: izquierda_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 184
+        y: 2428
+        width: 846
+        height: 919
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f44c4e7df1307a4d9674aaccf0fa041
-      internalID: 1834723185
+      spriteID: 3a183dbc6eec6a545b07bf0879d27dd9
+      internalID: -621036497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_1
+      name: izquierda_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 1294
+        y: 2428
+        width: 836
+        height: 919
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1041b2cbee45d547b019fa0a2f1c6df
-      internalID: 382482646
+      spriteID: aa22cb42129fc7b4b9edcccc593c415b
+      internalID: 1213873945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_2
+      name: izquierda_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 2422
+        y: 2407
+        width: 884
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f39257ffe29f00747aa22d7893a16e28
-      internalID: 1809374847
+      spriteID: 735e36ef2e082b148bb980a8ad587992
+      internalID: 528521875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_3
+      name: izquierda_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
+        x: 236
+        y: 1273
+        width: 655
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ead2c393b1105f48b1cf5cef95e108e
-      internalID: -1308564900
+      spriteID: 78b31db6fa0bb204fa28df1b19b84a96
+      internalID: -2064893602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_4
+      name: izquierda_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
+        x: 1350
+        y: 1273
+        width: 653
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a8c1b8cc9ad8134881780078d6c5c11
-      internalID: -1253238526
+      spriteID: 54dd769d65fc01140ab3a8c9d657b503
+      internalID: 1786814242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_5
+      name: izquierda_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 2505
+        y: 1189
+        width: 597
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7d8505179d7204393a9cd8485a784d
-      internalID: 155863874
+      spriteID: 02dc46acf6ba9bd45b9a6705a84d0ecf
+      internalID: -496496204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_6
+      name: izquierda_6
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 1385
+        y: 34
+        width: 597
+        height: 975
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f18c54ad594feea45b32fdaca17a8122
-      internalID: 210821541
+      spriteID: 4a5d8fd220ff4a54593f36fb56899a2e
+      internalID: 1191022762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_7
+      name: izquierda_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
+        x: 2469
+        y: 167
+        width: 674
+        height: 926
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,134 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2492fccb6a478e5458705958165ec9f2
-      internalID: -1075740076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_8
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5373c7f12bec4f0439725c909e7318c3
-      internalID: -1985294387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4034f64fb0e185542b64cfc1a94097f7
-      internalID: -235969769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6a3b85edd0eecf4ca299df8f5b7e684
-      internalID: -241897128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_11
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0766be6241404b4a8a93a1301f4d65f
-      internalID: 1653483185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_12
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd0e53e1f8bc2754590d051e3d41db45
-      internalID: 1552539602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wooden_House_Walls_Tilset_13
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58f51965a4a1c284aa20add0b114b8b2
-      internalID: -1135466246
+      spriteID: 95bf9597ea6df8d499cb885017e4affc
+      internalID: 282162255
       vertices: []
       indices: 
       edges: []
@@ -414,20 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wooden_House_Walls_Tilset_0: 1834723185
-      Wooden_House_Walls_Tilset_1: 382482646
-      Wooden_House_Walls_Tilset_10: -241897128
-      Wooden_House_Walls_Tilset_11: 1653483185
-      Wooden_House_Walls_Tilset_12: 1552539602
-      Wooden_House_Walls_Tilset_13: -1135466246
-      Wooden_House_Walls_Tilset_2: 1809374847
-      Wooden_House_Walls_Tilset_3: -1308564900
-      Wooden_House_Walls_Tilset_4: -1253238526
-      Wooden_House_Walls_Tilset_5: 155863874
-      Wooden_House_Walls_Tilset_6: 210821541
-      Wooden_House_Walls_Tilset_7: -1075740076
-      Wooden_House_Walls_Tilset_8: -1985294387
-      Wooden_House_Walls_Tilset_9: -235969769
+      izquierda_0: -621036497
+      izquierda_1: 1213873945
+      izquierda_2: 528521875
+      izquierda_3: -2064893602
+      izquierda_4: 1786814242
+      izquierda_5: -496496204
+      izquierda_6: 1191022762
+      izquierda_7: 282162255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
