@@ -7,11 +7,11 @@ using TMPro;
 public class Main_Menu : MonoBehaviour
 {
     // Método para iniciar el juego
-    public void IniciarJuego()
+    public TransitionManager transitionManager;
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Test");/*cambio entre escenas*/
+        transitionManager.StartTransition();
     }
-
     // Método para salir del juego
     public void SalirDelJuego()
     {
