@@ -4,19 +4,19 @@ using TMPro;
 
 public class ControlJuego : MonoBehaviour
 {
-    public int mueblesLimpios = 0;       // Cuántos muebles has limpiado hasta ahora
-    public int mueblesObjetivo = 7;      // Cantidad de muebles que debes limpiar para ganar
-    public float tiempoLimite = 180f;    // Tiempo límite en segundos
-    private float tiempoRestante;        // Contador de tiempo restante
-    private bool nivelCompletado = false; // Para asegurarnos de no ganar/perder el nivel varias veces
+    public int mueblesLimpios = 0;       
+    public int mueblesObjetivo = 7;      
+    public float tiempoLimite = 180f;    
+    [SerializeField]private float tiempoRestante;        
+    [SerializeField]private bool nivelCompletado = false;
 
-    public TextMeshProUGUI tiempoTexto;  // Texto en pantalla que muestra el tiempo restante
-    public TextMeshProUGUI mueblesTexto; // Texto en pantalla que muestra los muebles limpiados
-    public GameObject panelDerrota;      // Panel que aparece cuando pierdes
+    public TextMeshProUGUI tiempoTexto;  
+    public TextMeshProUGUI mueblesTexto; 
+    public GameObject panelDerrota;      
 
     void Start()
     {
-        tiempoRestante = tiempoLimite; // Inicializamos con el tiempo total disponible
+        tiempoRestante = tiempoLimite; // Inicializamos con el tiempo total 
         panelDerrota.SetActive(false); // Panel de derrota empieza apagado
         ActualizarTextoMuebles();      // Actualizamos el texto de muebles al arrancar
     }

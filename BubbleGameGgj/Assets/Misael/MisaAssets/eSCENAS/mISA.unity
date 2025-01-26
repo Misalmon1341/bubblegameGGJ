@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 93002382}
   - component: {fileID: 93002383}
   - component: {fileID: 93002384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5987,8 +5987,12 @@ GameObject:
   - component: {fileID: 385436274}
   - component: {fileID: 385436275}
   - component: {fileID: 385436276}
+
   - component: {fileID: 385436277}
-  m_Layer: 0
+
+
+  m_Layer: 3
+
   m_Name: SofaSucio2_0
   m_TagString: Mueble
   m_Icon: {fileID: 0}
@@ -6080,9 +6084,15 @@ MonoBehaviour:
   cantmugre: 100
   cantsuciedad: 50
   mueblelimpio: {fileID: 21300000, guid: 3d5ce2dc48d1f7d46971a4b409fa2d8d, type: 3}
+
   particulas: {fileID: 731553336}
   particulasS: {fileID: 153866332}
   destello: {fileID: 8300000, guid: 4af852bf6eabc144a8ca6e40dd98e70d, type: 3}
+
+  layerMuebles:
+    serializedVersion: 2
+    m_Bits: 8
+
 --- !u!61 &385436275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6095,7 +6105,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6136,7 +6146,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385436271}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
