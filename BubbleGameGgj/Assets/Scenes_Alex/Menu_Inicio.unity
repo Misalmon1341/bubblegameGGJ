@@ -834,7 +834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadePanel: {fileID: 780164496}
   fadeDuration: 1
-  nextSceneName: Mapa acomodado
+  nextSceneName: Cinematica_Inicial
 --- !u!4 &742411776
 Transform:
   m_ObjectHideFlags: 0
