@@ -9,31 +9,40 @@ public class Objetosucios : MonoBehaviour
     [Header("Vidamueble")]
     public int cantmugre;
     public int cantsuciedad;
-    public Color filtro;
 
     [Header("Sprites")]
     public Sprite mueblelimpio;
 
-
+    private bool estaLimpio = false;
+    private Color colorOriginal;
     void Start()
     {
         mueble = GetComponent<SpriteRenderer>();
         mueble.color = Color.gray;
+        colorOriginal = mueble.color;
     }
 
     public void Limpiar(int escoba)
     {
-        cantmugre -= escoba;
-        if (cantmugre < 0)
+        if (!estaLimpio && cantmugre > 0)
         {
-            mueble.color = Color.white;
+            cantmugre -= escoba;
+            cantmugre = Mathf.Max(cantmugre, 0);
+            float progreso = 1 - (float)cantmugre / 100;
+            mueble.color = Color.Lerp(colorOriginal, Color.white, progreso);
+
+            if (cantmugre == 0)
+            {
+                estaLimpio = true;
+            }
         }
     }
 
     public void Enjabonar(int jabon)
     {
         cantsuciedad -= jabon;
-        if (cantsuciedad < 0)
+        cantsuciedad = Mathf.Max(cantsuciedad, 0);
+        if (cantsuciedad == 0)
         {
             mueble.sprite = mueblelimpio;
         }

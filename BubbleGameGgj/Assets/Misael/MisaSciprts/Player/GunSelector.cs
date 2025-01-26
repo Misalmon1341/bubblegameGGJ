@@ -5,6 +5,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Limpiador
+{
+    Escoba,
+    Pistola
+}
 public class GunSelector : MonoBehaviour
 {
     public RectTransform selector;
@@ -12,8 +17,9 @@ public class GunSelector : MonoBehaviour
     public int escoba1;
     public int pistola2;
 
-    private bool escoba = true;
-    private bool pistola = false;
+  
+
+    private Limpiador limpiadorActual = Limpiador.Escoba;
 
     private Animator animator;
     private Rigidbody2D rb2D;
@@ -27,6 +33,7 @@ public class GunSelector : MonoBehaviour
     void Update()
     {
         CambiarLimpiador();
+
     }
 
     private void CambiarLimpiador()
@@ -34,40 +41,42 @@ public class GunSelector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selector.anchoredPosition = new Vector2(570, 361);
-            escoba = true;
-            pistola = false;
+            limpiadorActual = Limpiador.Escoba;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selector.anchoredPosition = new Vector2(752, 361);
-            escoba = false;
-            pistola = true;
+            limpiadorActual = Limpiador.Pistola;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private float cooldown = 0.4f;
+    private float nextActionTime = 0f;
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (escoba)
+        if (other.CompareTag("Mueble"))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Time.time >= nextActionTime && Input.GetMouseButtonDown(0)) 
             {
                 if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
                 {
-                    objetosucios.Limpiar(escoba1);
-                }
-            }
-        }
-        else if (pistola)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
-                {
-                    objetosucios.Enjabonar(pistola2);
+                    switch (limpiadorActual)
+                    {
+                        case Limpiador.Escoba:
+                            animator.SetTrigger("Barrido");
+                            objetosucios.Limpiar(escoba1);
+                            break;
+                        case Limpiador.Pistola:
+                            animator.SetTrigger("Jabonado");
+                            objetosucios.Enjabonar(pistola2);
+                            break;
+                    }
+
+                    nextActionTime = Time.time + cooldown; 
                 }
             }
         }
     }
- 
+
 
 
 }
