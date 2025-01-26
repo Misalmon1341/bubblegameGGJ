@@ -10,9 +10,17 @@ public enum Limpiador
 }
 public class GunSelector : MonoBehaviour
 {
+   
     public RectTransform selector;
     public int escoba1;
     public int pistola2;
+
+
+    private AudioSource audioSource;
+
+    public AudioClip escoba;
+    public AudioClip pistola;
+
     private Limpiador limpiadorActual = Limpiador.Escoba;
     private Animator animator;
 
@@ -20,6 +28,8 @@ public class GunSelector : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         selector.anchoredPosition = new Vector2(570, 361);
+        audioSource = GetComponent<AudioSource>();
+       
     }
 
     void Update()
@@ -34,6 +44,7 @@ public class GunSelector : MonoBehaviour
         {
             selector.anchoredPosition = new Vector2(570, 361);
             limpiadorActual = Limpiador.Escoba;
+            
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -46,7 +57,7 @@ public class GunSelector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // Lanza un rayo desde la posición del mouse
+            // Lanza un rayo desde la posiciÃ³n del mouse
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 
@@ -60,10 +71,12 @@ public class GunSelector : MonoBehaviour
                         case Limpiador.Escoba:
                             animator.SetTrigger("Barrido");
                             objetosucios.Limpiar(escoba1);
+                            audioSource.PlayOneShot(escoba);
                             break;
                         case Limpiador.Pistola:
                             animator.SetTrigger("Jabonado");
                             objetosucios.Enjabonar(pistola2);
+                            audioSource.PlayOneShot(pistola);
                             break;
                     }
                 }

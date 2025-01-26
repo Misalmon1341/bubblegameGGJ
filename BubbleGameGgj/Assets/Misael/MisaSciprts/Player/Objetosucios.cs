@@ -16,13 +16,17 @@ public class Objetosucios : MonoBehaviour
 
     private bool estaLimpio = false;
     private Color colorOriginal;
-    public LayerMask layerMuebles;
+private AudioSource audioSource;
 
+public AudioClip escoba;
+public AudioClip pistola;
     void Start()
     {
         mueble = GetComponent<SpriteRenderer>();
         mueble.color = Color.gray;
         colorOriginal = mueble.color;
+
+        audioSource = GetComponent<AudioSource>();
 
         // Buscamos el objeto que contiene el script ControlJuego
         controlJuego = FindObjectOfType<ControlJuego>();
@@ -30,7 +34,7 @@ public class Objetosucios : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Si se presiona el botÛn izquierdo del mouse
+        if (Input.GetMouseButtonDown(0)) // Si se presiona el bot√≥n izquierdo del mouse
         {
             DetectarObjetoClicado();
         }
@@ -60,8 +64,9 @@ public class Objetosucios : MonoBehaviour
             cantmugre = Mathf.Max(cantmugre, 0);
             float progreso = 1 - (float)cantmugre / 100;
             mueble.color = Color.Lerp(colorOriginal, Color.white, progreso);
+            particulas.Play();
 
-            if (cantmugre == 0 && cantsuciedad == 0)  // Si ambos contadores est·n en 0
+            if (cantmugre == 0 && cantsuciedad == 0)  // Si ambos contadores est√°n en 0
             {
                 estaLimpio = true;
                 controlJuego.LimpiarMueble();  // Aumentamos el contador de muebles limpios en ControlJuego
@@ -71,6 +76,16 @@ public class Objetosucios : MonoBehaviour
 
     public void Enjabonar(int jabon)
     {
+
+        cantsuciedad -= jabon;
+        cantsuciedad = Mathf.Max(cantsuciedad, 0);
+        particulas.Play();
+        if (cantsuciedad == 0)
+        {
+            mueble.sprite = mueblelimpio;
+            audioSource.PlayOneShot(destello);
+            particulasS.Play();
+
         if (!estaLimpio && cantsuciedad > 0)
         {
             cantsuciedad -= jabon;
@@ -80,12 +95,13 @@ public class Objetosucios : MonoBehaviour
             {
                 mueble.sprite = mueblelimpio;
 
-                if (cantmugre == 0)  // Verificamos si el mueble ya est· limpio en cuanto a la mugre
+                if (cantmugre == 0)  // Verificamos si el mueble ya est√° limpio en cuanto a la mugre
                 {
                     estaLimpio = true;
                     controlJuego.LimpiarMueble();  // Aumentamos el contador de muebles limpios en ControlJuego
                 }
             }
+
         }
     }
 }
