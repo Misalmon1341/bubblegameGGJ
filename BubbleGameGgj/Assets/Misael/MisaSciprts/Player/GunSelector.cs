@@ -5,6 +5,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Limpiador { 
+    Escoba,
+    Pistola
+
+}
 public class GunSelector : MonoBehaviour
 {
     public RectTransform selector;
@@ -12,8 +17,7 @@ public class GunSelector : MonoBehaviour
     public int escoba1;
     public int pistola2;
 
-    private bool escoba = true;
-    private bool pistola = false;
+    private Limpiador limpiadorActual = Limpiador.Escoba;
 
     private Animator animator;
     private Rigidbody2D rb2D;
@@ -34,40 +38,33 @@ public class GunSelector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selector.anchoredPosition = new Vector2(570, 361);
-            escoba = true;
-            pistola = false;
+            limpiadorActual = Limpiador.Escoba;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selector.anchoredPosition = new Vector2(752, 361);
-            escoba = false;
-            pistola = true;
+            limpiadorActual = Limpiador.Pistola;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (escoba)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
             {
-                if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
+                switch (limpiadorActual)
                 {
-                    objetosucios.Limpiar(escoba1);
-                }
-            }
-        }
-        else if (pistola)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
-                {
-                    objetosucios.Enjabonar(pistola2);
+                    case Limpiador.Escoba:
+                        objetosucios.Limpiar(escoba1);
+                        break;
+                    case Limpiador.Pistola:
+                        objetosucios.Enjabonar(pistola2);
+                        break;
                 }
             }
         }
     }
- 
+
 
 
 }
