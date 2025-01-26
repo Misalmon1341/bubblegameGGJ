@@ -16,10 +16,15 @@ public class Objetosucios : MonoBehaviour
 
     private bool estaLimpio = false;
     private Color colorOriginal;
-private AudioSource audioSource;
 
-public AudioClip escoba;
-public AudioClip pistola;
+    public ParticleSystem particulas;
+    public ParticleSystem particulasS;
+
+    private AudioSource audioSource;
+
+    public AudioClip destello;
+
+    public LayerMask Muebles;
     void Start()
     {
         mueble = GetComponent<SpriteRenderer>();
@@ -45,7 +50,7 @@ public AudioClip pistola;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMuebles)) // Solo detecta objetos en el Layer de muebles
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, Muebles)) // Solo detecta objetos en el Layer de muebles
         {
             Objetosucios objetoS = hit.collider.GetComponent<Objetosucios>();
 
@@ -86,22 +91,23 @@ public AudioClip pistola;
             audioSource.PlayOneShot(destello);
             particulasS.Play();
 
-        if (!estaLimpio && cantsuciedad > 0)
-        {
-            cantsuciedad -= jabon;
-            cantsuciedad = Mathf.Max(cantsuciedad, 0);
-
-            if (cantsuciedad == 0)
+            if (!estaLimpio && cantsuciedad > 0)
             {
-                mueble.sprite = mueblelimpio;
+                cantsuciedad -= jabon;
+                cantsuciedad = Mathf.Max(cantsuciedad, 0);
 
-                if (cantmugre == 0)  // Verificamos si el mueble ya está limpio en cuanto a la mugre
+                if (cantsuciedad == 0)
                 {
-                    estaLimpio = true;
-                    controlJuego.LimpiarMueble();  // Aumentamos el contador de muebles limpios en ControlJuego
-                }
-            }
+                    mueble.sprite = mueblelimpio;
 
+                    if (cantmugre == 0)  // Verificamos si el mueble ya está limpio en cuanto a la mugre
+                    {
+                        estaLimpio = true;
+                        controlJuego.LimpiarMueble();  // Aumentamos el contador de muebles limpios en ControlJuego
+                    }
+                }
+
+            }
         }
     }
 }
