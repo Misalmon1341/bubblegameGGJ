@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 354842e8d183b7b419d6d1e928f9d561
+guid: 34398e0fdb1ec994db8a479dfaa06d15
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,55 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic_tools_and_meterials_0
+      name: SofaSucio2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 16
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fac11f8572e079e47ad4ea97b83156f6
-      internalID: 217670076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic_tools_and_meterials_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 16
-        width: 13
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d9273b5cbd232548b1efe6f0f46b6a3
-      internalID: -1744697684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic_tools_and_meterials_2
-      rect:
-        serializedVersion: 2
-        x: 34
+        x: 8
         y: 17
-        width: 13
-        height: 15
+        width: 144
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,71 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6550f32ac67c0ed42a8b5b65bc7063dd
-      internalID: -994132029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic_tools_and_meterials_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 314b8fe81a6b0c541b2f4ca99484e1fd
-      internalID: 1990477930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic_tools_and_meterials_4
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 13
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86bee484886fe7f47ae3bb576067510b
-      internalID: 245334717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic_tools_and_meterials_5
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 1
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e61225e82d66a7f418f767fb47159dec
-      internalID: 1492423045
+      spriteID: 3f8adc771c4c63b45ad6e5e38e0373e1
+      internalID: -1608921065
       vertices: []
       indices: 
       edges: []
@@ -246,12 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic_tools_and_meterials_0: 217670076
-      Basic_tools_and_meterials_1: -1744697684
-      Basic_tools_and_meterials_2: -994132029
-      Basic_tools_and_meterials_3: 1990477930
-      Basic_tools_and_meterials_4: 245334717
-      Basic_tools_and_meterials_5: 1492423045
+      SofaSucio2_0: -1608921065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
