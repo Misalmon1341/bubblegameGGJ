@@ -1,4 +1,4 @@
-# *Foreáno Simulator*
+# *Foráneo Simulator*
 
 
 ### Descripción
