@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes_Alex/Menu_Inicio.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes_Alex/Test.unity
+    guid: abd02e7fce533894b91f8eb0ac6e7faf
+  - enabled: 1
+    path: Assets/Scenes_Alex/Victory.unity
+    guid: e91e0f8037fe5b54cbbc7014c0c0dbb3
+  - enabled: 1
+    path: Assets/Scenes_Alex/Cinematica_Inicial.unity
+    guid: 14fd3a2c851bddb45aed6a3293e46806
   m_configObjects: {}
