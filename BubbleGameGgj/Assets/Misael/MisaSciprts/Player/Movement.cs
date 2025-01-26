@@ -13,11 +13,17 @@ public class Movement : MonoBehaviour
     private float movimientoX;
     private float movimientoY;
     private Animator animator;
-    [SerializeField] private ParticleSystem particulas;
+
+    private AudioSource audioSource;
+    public AudioClip sonidoPasos;
+
+    private bool estaCaminando = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,20 +36,26 @@ public class Movement : MonoBehaviour
         {
             animator.SetFloat("UltimoX", movimientoX);
             animator.SetFloat("UltimoY", movimientoY);
+            
+            if (!estaCaminando) 
+            {
+                audioSource.clip = sonidoPasos; 
+                audioSource.loop = true;        
+                audioSource.Play();             
+                estaCaminando = true;
+            }
+        }
+        else
+        {
+            if (estaCaminando) 
+            {
+                audioSource.Stop();
+                estaCaminando = false;
+            }
         }
         direccion = new Vector2(movimientoX, movimientoY).normalized;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Mueble"))
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                particulas.Play();
-            }
-        }
-    }*/
     private void FixedUpdate()
     {
         rb2D.MovePosition(rb2D.position + direccion * velocidadMovimiento * Time.fixedDeltaTime);
