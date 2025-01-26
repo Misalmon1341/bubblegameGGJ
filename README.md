@@ -1,1 +1,23 @@
-*Foreano Simulator*
+# *Foreano Simulator*
+
+
+### Descripción
+Ayuda a Joshe Luis (un foráneao) a limpiar su cuarto antes de que su madre llegué por él y lo regañe.
+
+
+
+### Temática
+Limpieza
+Independencia Juvenil
+Responsabilidad familiar
+
+
+### Link de Referencia
+
+
+
+
+###
+
+
+
