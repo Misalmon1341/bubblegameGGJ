@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Misael/MisaAssets/eSCENAS/mISA.unity
+    path: Assets/Scenes_Alex/Menu_Inicio.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes_Alex/Test.unity
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes_Alex/Cinematica_Inicial.unity
     guid: 14fd3a2c851bddb45aed6a3293e46806
+  - enabled: 1
+    path: Assets/Scenes_Alex/Mapa acomodado.unity
+    guid: 5e63eab849f42d8459341923cbc4f22c
   m_configObjects: {}
