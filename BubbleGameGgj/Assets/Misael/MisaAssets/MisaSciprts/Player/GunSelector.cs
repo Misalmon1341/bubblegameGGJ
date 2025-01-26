@@ -27,7 +27,7 @@ public class GunSelector : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        selector.anchoredPosition = new Vector2(570, 361);
+        selector.anchoredPosition = new Vector2(546.856f, 358.3353f);
         audioSource = GetComponent<AudioSource>();
        
     }
@@ -42,13 +42,13 @@ public class GunSelector : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            selector.anchoredPosition = new Vector2(570, 361);
+            selector.anchoredPosition = new Vector2(546.856f, 358.3353f);
             limpiadorActual = Limpiador.Escoba;
             
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            selector.anchoredPosition = new Vector2(752, 361);
+            selector.anchoredPosition = new Vector2(773.4027f, 358.3353f);
             limpiadorActual = Limpiador.Pistola;
         }
     }

@@ -7,7 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes_Alex/Menu_Inicio.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: b0e4a55f8e9b10b4d91575cca6e4c531
+  - enabled: 1
+    path: Assets/Scenes_Alex/Cinematica_Inicial.unity
+    guid: 14fd3a2c851bddb45aed6a3293e46806
+  - enabled: 1
+    path: Assets/Scenes_Alex/Mapa acomodado.unity
+    guid: 5e63eab849f42d8459341923cbc4f22c
   - enabled: 1
     path: Assets/Scenes_Alex/Test.unity
     guid: abd02e7fce533894b91f8eb0ac6e7faf
@@ -15,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes_Alex/Victoria.unity
     guid: e91e0f8037fe5b54cbbc7014c0c0dbb3
   - enabled: 1
-    path: Assets/Scenes_Alex/Cinematica_Inicial.unity
-    guid: 14fd3a2c851bddb45aed6a3293e46806
-  - enabled: 1
-    path: Assets/Scenes_Alex/Mapa acomodado.unity
-    guid: 5e63eab849f42d8459341923cbc4f22c
+    path: Assets/Scenes_Alex/Lost.unity
+    guid: 5012d2c3fb03ec740b4086d6babb7c09
   m_configObjects: {}

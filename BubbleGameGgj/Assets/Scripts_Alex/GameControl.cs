@@ -53,7 +53,7 @@ public class ControlJuego : MonoBehaviour
     // Función para actualizar el texto de los muebles en pantalla
     void ActualizarTextoMuebles()
     {
-        mueblesTexto.text = "Muebles Limpiados: " + mueblesLimpios + "/" + mueblesObjetivo;
+        mueblesTexto.text =  mueblesLimpios + "/" + mueblesObjetivo;
     }
 
     // Esta función se llama cuando ganas el nivel
@@ -66,9 +66,10 @@ public class ControlJuego : MonoBehaviour
     // Esta función se llama cuando pierdes el nivel
     void PierdeNivel()
     {
-        nivelCompletado = true; 
-        panelDerrota.SetActive(true);  
+        nivelCompletado = true;
+        SceneManager.LoadScene("Lost");
     }
+ 
 
     // Función para reiniciar el nivel (botón "Reiniciar Nivel")
     public void ReiniciarNivel()
