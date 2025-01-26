@@ -5,10 +5,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Limpiador { 
+public enum Limpiador
+{
     Escoba,
     Pistola
-
 }
 public class GunSelector : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class GunSelector : MonoBehaviour
 
     public int escoba1;
     public int pistola2;
+
+  
 
     private Limpiador limpiadorActual = Limpiador.Escoba;
 
@@ -31,6 +33,7 @@ public class GunSelector : MonoBehaviour
     void Update()
     {
         CambiarLimpiador();
+
     }
 
     private void CambiarLimpiador()
@@ -46,20 +49,29 @@ public class GunSelector : MonoBehaviour
             limpiadorActual = Limpiador.Pistola;
         }
     }
+    private float cooldown = 0.4f;
+    private float nextActionTime = 0f;
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (other.CompareTag("Mueble"))
         {
-            if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
+            if (Time.time >= nextActionTime && Input.GetMouseButtonDown(0)) 
             {
-                switch (limpiadorActual)
+                if (other.TryGetComponent<Objetosucios>(out Objetosucios objetosucios))
                 {
-                    case Limpiador.Escoba:
-                        objetosucios.Limpiar(escoba1);
-                        break;
-                    case Limpiador.Pistola:
-                        objetosucios.Enjabonar(pistola2);
-                        break;
+                    switch (limpiadorActual)
+                    {
+                        case Limpiador.Escoba:
+                            animator.SetTrigger("Barrido");
+                            objetosucios.Limpiar(escoba1);
+                            break;
+                        case Limpiador.Pistola:
+                            animator.SetTrigger("Jabonado");
+                            objetosucios.Enjabonar(pistola2);
+                            break;
+                    }
+
+                    nextActionTime = Time.time + cooldown; 
                 }
             }
         }
