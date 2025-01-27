@@ -18,9 +18,11 @@ Responsabilidad familiar.
 
 ### Link de Referencia
 
-*Presentacion*
-https://www.canva.com/design/DAGdRuAZSqw/TMBab0ZoYcxcJU7-AVt77A/edit
+[*Presentacion*](https://www.canva.com/design/DAGdRuAZSqw/TMBab0ZoYcxcJU7-AVt77A/edit?utm_content=DAGdRuAZSqw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+### Canal de Distribución
+
+https://xtianlors.itch.io/foraneo-simulator
 
 
 ###
